@@ -20,8 +20,7 @@ class Farm {
     }
 
     public void butcher(Butcher butcher) {
-        for (int i = 0; i < animalList.size(); i++) {
-        }
+        animalList.removeIf(butcher::canButcher);
     }
 
     public boolean isEmpty() {
