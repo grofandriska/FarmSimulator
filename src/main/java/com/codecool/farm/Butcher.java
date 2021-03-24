@@ -5,9 +5,6 @@ import com.codecool.farm.animal.Animal;
 class Butcher {
 
     public boolean canButcher(Animal animal) {
-        if (animal.getSize() > 4) {
-            return true;
-        }
-        return false;
+        return animal.getSize() > 4;
     }
 }

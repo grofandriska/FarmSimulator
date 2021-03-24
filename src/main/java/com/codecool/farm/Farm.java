@@ -6,21 +6,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Farm {
-    List<Animal> animalList = new ArrayList<>();
+
+    public List<Animal> animalList;
 
     public Farm(List<Animal> animalList) {
         this.animalList = animalList;
     }
 
     public void feedAnimals() {
-        for (Animal a :animalList) {
-            a.feed(); }
+        for (Animal animal : animalList) {
+            animal.feed();
         }
-
+    }
 
     public void butcher(Butcher butcher) {
         for (int i = 0; i < animalList.size(); i++) {
-
         }
     }
 
@@ -31,17 +31,16 @@ class Farm {
         return false;
     }
 
-    public List getAnimals(){
-        List<String> list = new ArrayList<>();
-        for (int i = 0 ; i < animalList.size();i++){}return list;
+    public List getAnimals() {
+        return animalList;
     }
 
     public List<String> getStatus() {
         List<String> result = new ArrayList<>();
-        for (int i = 0; i < animalList.size(); i++){
-            int tempSize= animalList.get(i).getSize();
-            String tempName = animalList.get(i).getClass().getSimpleName();
-            result.add("There is a "+tempSize+ " sized "+ tempName +" in the farm.");
+        for (int i = 0; i < animalList.size(); i++) {
+            int tempSize = animalList.get(i).getSize();
+            String tempName = animalList.get(i).getClass().getSimpleName().toLowerCase();
+            result.add("There is a " + tempSize + " sized " + tempName + " in the farm.");
         }
         return result;
     }

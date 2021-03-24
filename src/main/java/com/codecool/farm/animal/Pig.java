@@ -4,7 +4,7 @@ public class Pig extends Animal {
 
     @Override
     public void feed() {
-        this.size = +1;
+        this.size = size +1;
     }
 
 }
